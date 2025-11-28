@@ -1,0 +1,88 @@
+* {
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.box-1 {
+    display: flex;
+    background: linear-gradient(to top , white, blue)
+}
+
+.img-1 {
+    width: 100px;
+}
+
+.img-1 img {
+    width: 300px;
+}
+
+
+.menu-1 {
+    transform: translateX(700px);
+}
+
+.menu-1 ul li {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.menu-1 ul li:hover {
+    transform: translateY(-5px);
+}
+
+.menu-1 ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: aqua;
+    transition: width 0.2s;
+}
+
+.menu-1 ul li:hover::after {
+    width: 100%;
+}
+
+
+.menu-1 li {
+    margin: 20px;
+}
+
+.menu-1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.menu-1 a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    transition: 0.8s ease;
+}
+
+.menu-1 a:hover {
+    transition: 0.5s ease;
+    color: black;
+}
+
+.menu-1 li {
+    list-style-type: none;
+}
+
+.conteiner-1{
+    display: flex;
+}
+
+.conteiner-1 img {
+    mask-image: linear-gradient(to bottom, transparent, white 70%), linear-gradient(to left, transparent, white 30%);
+    mask-composite: intersect;
+  -webkit-mask-composite: source-in; /* necesario para Chrome */
+  width: 70%;
+}
+
+
