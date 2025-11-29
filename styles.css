@@ -78,6 +78,11 @@
     display: flex;
 }
 
+.conteiner-1 h1{
+    text-align: center;
+    color: blue;
+}
+
 .conteiner-1 img {
     mask-image: linear-gradient(to bottom, transparent, white 70%), linear-gradient(to left, transparent, white 30%);
     mask-composite: intersect;
