@@ -32,6 +32,68 @@ body {
 
 
 
+/* Contenedor general */
+.info-section {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+/* Tarjeta elegante */
+.info-card {
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: black;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Animación */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px) scale(0.98);
+    filter: blur(8px);
+    transition: all 0.9s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+/* 📱 Responsive: Celulares */
+@media (max-width: 600px) {
+    .info-section {
+        padding: 60px 15px;
+    }
+
+    .info-card {
+        padding: 25px;
+        border-radius: 15px;
+        font-size: 0.95rem;
+    }
+
+    .info-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .info-card p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+/* 📱 Tablets */
+@media (max-width: 900px) {
+    .info-card {
+        max-width: 85%;
+    }
+}
+
 
 
 

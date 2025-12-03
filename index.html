@@ -65,7 +65,7 @@
             <h1>TU MEJOR ALIADO EN RASTREO SATELITAL</h1>
 
             <div class="conteiner-1-ctd">
-                <h3>Zeus GPS</h3>
+                <h3>Zeus GPS S.A.S</h3>
 
                 <p>
                     Somos una empresa especializada en rastreo satelital y soluciones de seguridad vehicular,
@@ -87,6 +87,55 @@
             </div>
         </div>
     </div>
+
+
+    <section class="info-section reveal">
+        <div class="info-card">
+            <h2>Visión</h2>
+            <p>
+                🌟 Visión
+
+                Ser la empresa líder en rastreo satelital y seguridad vehicular en Colombia, reconocida por nuestra
+                innovación, precisión y confianza. Queremos que cada cliente sienta la tranquilidad de tener su vehículo
+                protegido, sin importar dónde se encuentre, con tecnología de punta y un servicio humano, rápido y
+                cercano.
+            </p>
+        </div>
+    </section>
+
+    <section class="info-section reveal">
+        <div class="info-card">
+            <h2>Misión</h2>
+            <p>
+                🎯 Misión
+
+                Brindar soluciones de rastreo satelital, seguridad y control vehicular que garanticen protección,
+                eficiencia y tranquilidad a nuestros clientes. Nos comprometemos a ofrecer un servicio confiable,
+                atención inmediata, instalación profesional y herramientas tecnológicas modernas que permitan monitorear
+                y cuidar cada vehículo en todo momento.
+            </p>
+        </div>
+    </section>
+
+
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        reveals.forEach(el => observer.observe(el));
+    </script>
+
+
 
 
     <br><br><br>
