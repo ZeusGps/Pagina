@@ -1,8 +1,38 @@
 * {
-   
+    padding: 0;
     margin: 0;
     font-weight: 600;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: linear-gradient(
+    to left,
+    rgba(255, 221, 0, 1) 0%,        /* Amarillo fuerte */
+    rgba(255, 235, 140, 0.9) 8%,    /* Amarillo suave */
+    rgba(0, 71, 255, 0.85) 16%,     /* Azul fuerte */
+    rgba(120, 170, 255, 0.75) 25%,  /* Azul suave */
+    rgba(255, 255, 255, 1) 60%,     /* INICIO del blanco grande */
+    rgba(255, 255, 255, 1) 100%     /* Blanco gigante dominando */
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  background: transparent !important;
+}
+
+
+
+
+
 
 
 
@@ -15,21 +45,7 @@
 }
 
 
-.box-1 {
 
-    margin-bottom: 60px;
-    display: flex;
-    background: linear-gradient(to bottom,
-            #0047ff 0%,
-            /* Azul arriba */
-            #1f5dff 35%,
-            /* Azul intermedio */
-            #ffdd00 70%,
-            /* Amarillo más abajo */
-            white 100%
-            /* Blanco abajo (suave) */
-        );
-}
 
 .conteiner-1-img {
     mask-image: linear-gradient(to bottom, transparent, white 50%), linear-gradient(to right, transparent, white 5%), linear-gradient(to left, transparent, white 20%), linear-gradient(to top, transparent, white 10%);
@@ -230,17 +246,17 @@
 
 
 footer {
+
+
+
     margin-top:200px ;
     padding: 35px 20px;
 
-    background: linear-gradient(0deg,
-            #ffdd00 0%,
-            /* Amarillo abajo */
-            #0047ff 50%,
-            /* Azul al centro */
-            white 100%
-            /* Blanco arriba */
-        );
+
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -362,6 +378,9 @@ footer li {
     cursor: pointer;
     margin-right: 20px;
     color: black;
+
+
+    
 }
 
 /* Estructura del header en PC */
@@ -401,7 +420,14 @@ footer li {
         top: 90px;
         right: 0;
         width: 100%;
-        background: white;
+        background: linear-gradient(0deg,
+            white 0%,
+            /* Amarillo abajo */
+            #0047ff 50%,
+            /* Azul al centro */
+            #ffdd00 100%
+            /* Blanco arriba */
+        );
         max-height: 0;
         overflow: hidden;
         text-align: center;
@@ -618,6 +644,7 @@ footer li {
 }
 
 .gps-btn {
+    margin-top: 10px;
     display: inline-block;
     padding: 14px 24px;
     font-size: 17px;
@@ -703,8 +730,253 @@ footer li {
     }
 
     .gps-btn {
+        margin-top: 10px;
         width: 100%;
-        padding: 14px;
+        padding: 5px;
     }
 }
 
+
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+
+
+/* ====== ACOMPAÑAMIENTO POLICIAL - STYLES (CORREGIDO) ====== */
+
+.zp-card-acompanamiento {
+    
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 18px;
+  border-radius: 14px;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #0047ff 0%, #ffdd00 100%) border-box;
+  border: 10px solid transparent;
+  box-shadow: 0 10px 30px rgba(2,20,70,0.12);
+  overflow: hidden;
+}
+
+/* Left column (badge + image) */
+.zp-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 0 0 220px; /* espacio fijo en desktop */
+  align-items: center;
+}
+
+/* Escudo */
+.zp-badge {
+  width: 68px;
+  height: 68px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.95);
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+/* Image box */
+.zp-image-box {
+  width: 100%;
+  max-width: 220px;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  border: 2px solid rgba(0,71,255,0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.zp-image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Right column (texto) */
+.zp-card-body {
+  flex: 1;
+  padding: 6px 4px;
+  min-width: 0; /* importante para evitar overflow en flex */
+}
+
+.zp-card-body h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #0047ff;
+  letter-spacing: 0.2px;
+}
+
+.zp-lead {
+  margin: 0 0 12px 0;
+  color: #222;
+  line-height: 1.45;
+  font-size: 15px;
+}
+
+/* Lista */
+.zp-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 8px 14px;
+  font-weight: 600;
+  color: #0b2b69;
+}
+
+.zp-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* CTA */
+.zp-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.zp-cta {
+  display: inline-block;
+  background: linear-gradient(135deg,#0047ff,#1f7cff);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,70,255,0.18);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.zp-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,70,255,0.22);
+}
+
+.zp-note {
+  color: #333;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 820px) {
+  .zp-card-acompanamiento {
+    padding: 14px;
+    gap: 14px;
+  }
+  .zp-features {
+    grid-template-columns: 1fr;
+  }
+  .zp-left {
+    flex: 0 0 140px;
+  }
+  .zp-image-box { max-width: 140px; }
+  .zp-card-body h3 { font-size: 18px; }
+  .zp-cta { padding: 10px 14px; font-size: 15px; }
+}
+
+@media (max-width: 420px) {
+  .zp-card-acompanamiento {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .zp-card-body { padding: 0; }
+  .zp-left { order: -1; } /* mostrar imagen arriba si prefieres */
+  .zp-features { text-align: left; margin: 6px 0 12px; }
+  .zp-note { display: block; width: 100%; text-align: center; }
+}
+
+
+/* ======== PULIDO GENERAL ======== */
+
+.zp-card-acompanamiento {
+
+  margin-top: 200px;
+  margin-bottom: 200px;
+  align-items: center;     /* Imagen y texto a la misma altura */
+}
+
+/* Mejor espaciado entre imagen y texto */
+.zp-left {
+  margin-right: 10px;
+}
+
+/* Mejor lectura del párrafo */
+.zp-card-body p {
+  text-align: justify;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+/* Listas más separadas y ordenadas */
+.zp-features li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* Más espacio entre las dos columnas de listas */
+.zp-features {
+  column-gap: 25px !important;
+  row-gap: 8px !important;
+}
+
+/* Botón: más presencia visual */
+.zp-cta {
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
+/* Nota más discreta */
+.zp-note {
+  margin-left: 4px;
+  opacity: 0.8;
+}
+
+/* ======== RESPONSIVE PERFECIONADO ======== */
+@media (max-width: 900px) {
+  .zp-card-acompanamiento {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .zp-left {
+    margin: 0 0 16px 0;
+  }
+
+  .zp-features {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .zp-card-body {
+    width: 100%;
+  }
+
+  .zp-card-body p {
+    text-align: center;
+  }
+}
