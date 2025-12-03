@@ -5,7 +5,9 @@
 
     <meta name="google-site-verification" content="d6FvsiXUCwmFtDLoNyDsbH6mlHRyvzuFmKOJYVmByUQ" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/zeus99.png" type="image/png">
+    <link rel="icon" type="image/png" href="img/zeus99.png">
+    <meta name="description"
+        content="Zeus GPS S.A.S - Empresa especializada en rastreo satelital, GPS para vehículos, alarmas, polarizados, vidrios eléctricos y más.">
 
 
 
@@ -16,24 +18,43 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Zeus Gps</title>
+
+
 </head>
 
 <body>
 
     <header>
         <div class="box-1">
+
             <div class="img-1">
                 <img src="img/zeus33.png" alt="">
             </div>
-            <div class="menu-1">
+
+            <!-- BOTÓN HAMBURGUESA (solo en móvil) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+
+            <!-- MENÚ NORMAL / MENÚ MÓVIL -->
+            <div class="menu-1" id="menu">
                 <ul>
                     <li><a href="">contactanos</a></li>
                     <li><a href="">soat</a></li>
                     <li><a href="">gps</a></li>
                 </ul>
             </div>
+
         </div>
     </header>
+
+    <!-- SCRIPT PARA ABRIR / CERRAR MENÚ -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
+
 
     <div class="conteiner-1">
         <div class="conteiner-1-img">
@@ -165,6 +186,84 @@
 
         </div>
     </div>
+
+
+
+<div class="platform-container">
+
+    <!-- MASCOTA SVG CON GPS EN LA MANO -->
+    <div class="mascot-svg">
+        <svg width="200" height="280" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- sombra -->
+            <ellipse cx="100" cy="265" rx="55" ry="18" fill="rgba(0,0,0,0.25)" />
+
+            <!-- gorra -->
+            <rect x="45" y="25" width="110" height="40" rx="10" fill="#0047FF"/>
+            <rect x="62" y="15" width="80" height="25" rx="12" fill="#0037CC"/>
+            <!-- logo Z -->
+            <text x="100" y="42" font-size="22" font-weight="800" text-anchor="middle" fill="#FFDD00">Z</text>
+
+            <!-- cabello -->
+            <path d="M55 55 q45 -40 90 0" stroke="#2E2E2E" stroke-width="10" stroke-linecap="round" />
+
+            <!-- cabeza -->
+            <circle cx="100" cy="105" r="55" fill="#FFDD66" stroke="#E4B84C" stroke-width="5"/>
+
+            <!-- ojos con animación -->
+            <circle class="eye-blink" cx="78" cy="95" r="10" fill="#000"/>
+            <circle class="eye-blink" cx="122" cy="95" r="10" fill="#000"/>
+
+            <!-- boca -->
+            <path d="M75 125 Q100 145 125 125" stroke="#000" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+            <!-- cuerpo -->
+            <rect x="65" y="160" width="70" height="100" rx="20" fill="#0047FF" />
+
+            <!-- brazo izquierdo horizontal -->
+            <rect x="35" y="165" width="30" height="25" rx="10" fill="#FFDD66"/>
+            <!-- brazo izquierdo vertical -->
+            <rect x="42" y="165" width="14" height="75" rx="7" fill="#FFDD66"/>
+
+            <!-- brazo derecho horizontal -->
+            <rect x="135" y="165" width="30" height="25" rx="10" fill="#FFDD66"/>
+
+            <!-- brazo derecho vertical (sostiene GPS) -->
+            <rect x="144" y="165" width="14" height="75" rx="7" fill="#FFDD66"/>
+
+            <!-- GPS EN LA MANO DERECHA -->
+            <g transform="translate(150, 195) rotate(-10)">
+                <!-- cuerpo del GPS -->
+                <rect x="-10" y="-25" width="40" height="55" rx="6" fill="#0037CC" stroke="#001A66" stroke-width="3"/>
+                
+                <!-- pantalla -->
+                <rect x="-2" y="-18" width="24" height="28" rx="4" fill="#111" stroke="#444" stroke-width="2"/>
+
+                <!-- icono ubicación dentro -->
+                <circle cx="10" cy="-5" r="6" fill="#FFDD00"/>
+                <circle class="gps-light" cx="10" cy="-5" r="3" fill="#D90000"/>
+
+
+                <!-- antena -->
+                <rect x="8" y="-35" width="4" height="12" rx="2" fill="#FFDD00"/>
+            </g>
+
+        </svg>
+    </div>
+
+    <!-- Tarjeta -->
+    <div class="gps-card">
+        <h2>Plataforma GPS</h2>
+        <p>Accede a la plataforma de rastreo en tiempo real.</p>
+
+        <a href="https://gpsmobile.pro/es/main/" target="_blank" class="gps-btn">
+            Ingresar Ahora
+        </a>
+    </div>
+</div>
+
+
+
 
 
     <footer>

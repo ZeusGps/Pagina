@@ -1,7 +1,17 @@
 * {
-    text-transform: capitalize;
+   
     margin: 0;
     font-weight: 600;
+}
+
+
+
+* {
+    text-transform: lowercase;   /* todo en minúscula */
+}
+
+*::first-letter {
+    text-transform: uppercase;  /* solo la PRIMER letra en mayúscula */
 }
 
 
@@ -39,9 +49,7 @@
 }
 
 
-.menu-1 {
-    transform: translateX(700px);
-}
+
 
 .menu-1 ul li {
     font-weight: 600;
@@ -135,6 +143,7 @@
 }
 
 .conteiner-2 {
+
     width: 90%;
     margin: auto;
     display: flex;
@@ -221,6 +230,7 @@
 
 
 footer {
+    margin-top:200px ;
     padding: 35px 20px;
 
     background: linear-gradient(0deg,
@@ -273,10 +283,10 @@ footer li {
 
 .conteiner-3 {
 
-    margin-bottom: 100px;
-    height: 300px;
+    text-transform: capitalize;
+    margin: 100px 0;
     border-radius: 15px;
-
+    height: auto;
 }
 
 
@@ -318,3 +328,383 @@ footer li {
     transform: translateY(-6px) scale(1.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ */
+/*    MENÚ HAMBURGUESA MÓVIL      */
+/* ------------------------------ */
+
+.hamburger {
+    display: none; /* oculto en PC */
+    font-size: 36px;
+    cursor: pointer;
+    margin-right: 20px;
+    color: black;
+}
+
+/* Estructura del header en PC */
+.box-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* MENÚ móvil oculto inicialmente */
+.menu-1 {
+    transition: max-height .3s ease;
+}
+
+.menu-1 ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+
+    /* Mostrar botón hamburguesa */
+    .hamburger {
+        display: block;
+    }
+
+    /* Ajustar logo */
+    .img-1 img {
+        width: 200px;
+    }
+
+    /* Menu en modo móvil */
+    .menu-1 {
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 100%;
+        background: white;
+        max-height: 0;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .menu-1.active {
+        max-height: 300px; /* se despliega */
+        padding: 10px 0;
+    }
+
+    .menu-1 ul li {
+        display: block;
+        margin: 15px 0 !important;
+    }
+
+    .menu-1 a {
+        font-size: 24px;
+    }
+
+    /* Evitar que el menú se mueva al lado */
+    .menu-1 {
+        transform: none !important;
+        margin: 0 !important;
+    }
+}
+
+
+
+/* ------------------------------
+   CONTENEDOR 1 RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+    .conteiner-1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .conteiner-1-img {
+        width: 100%;
+    }
+
+    .conteiner-1-content h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* ------------------------------
+   CONTENEDOR 2 RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+
+    .conteiner-2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteiner-2-img img {
+        width: 170px;
+        margin-top: 20px;
+    }
+
+    .servicios-lista {
+        grid-template-columns: 1fr !important;
+        padding: 0 20px;
+    }
+}
+
+
+
+/* ------------------------------
+   BENEFICIOS RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+    .beneficios {
+        width: 95%;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .item {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+/* ------------------------------
+   FOOTER RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer ul {
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .conteiner-4-img img {
+        width: 200px;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+
+    .conteiner-3 {
+        height: auto !important;   /* fuerza a expandirse */
+        padding: 20px;
+    }
+
+    .beneficios {
+        width: 100%;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .item {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .beneficios {
+        width: 90%;
+        max-width: 100%;
+        padding: 12px; /* antes 20px */
+        border: 6px solid transparent; /* borde más fino */
+        margin: auto;
+    }
+
+    .item {
+        margin: 6px 0;
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .item svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+/* CONTENEDOR GENERAL */
+.platform-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin: 50px auto;
+}
+
+
+/* MASCOTA SVG */
+.mascot-svg {
+    width: 200px;
+    animation: mascotFloat 4s ease-in-out infinite;
+}
+
+/* Animación de flotación suave */
+@keyframes mascotFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* ANIMACIÓN DE PARPADEO */
+.eye-blink {
+    animation: blink 4s infinite;
+    transform-origin: center;
+}
+
+@keyframes blink {
+    0%, 92%, 100% { transform: scaleY(1); }
+    95%          { transform: scaleY(0.1); }
+}
+
+/* TARJETA PLATAFORMA */
+.gps-card {
+    width: 330px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    background: white;
+    border: 4px solid transparent;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #0047ff, #ffdd00) border-box;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.gps-card h2 {
+    font-size: 24px;
+    color: #0047ff;
+    margin-bottom: 10px;
+}
+
+.gps-btn {
+    display: inline-block;
+    padding: 14px 24px;
+    font-size: 17px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0047ff, #1f7cff);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.25);
+}
+
+.gps-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+    .platform-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mascot-svg {
+        width: 180px;
+    }
+
+    .gps-card {
+        width: 90%;
+    }
+}
+
+/* ANIMACIÓN LUZ DEL GPS */
+.gps-light {
+    animation: gpsBlink 1.2s infinite;
+    transform-origin: center;
+}
+
+@keyframes gpsBlink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.2; }
+}
+
+
+/* RESPONSIVE MEJORADO */
+@media (max-width: 800px) {
+
+    .platform-container {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px auto;
+    }
+
+    .mascot-svg {
+        width: 70%;
+        max-width: 240px;
+    }
+
+    .gps-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .gps-card h2 {
+        font-size: 20px;
+    }
+
+    .gps-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .mascot-svg {
+        width: 85%;
+        max-width: 220px;
+    }
+
+    .gps-card {
+        padding: 18px;
+    }
+
+    .gps-btn {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
