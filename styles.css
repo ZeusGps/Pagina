@@ -117,7 +117,7 @@ body {
     }
 
     .info-card {
-        height: 250px;
+        height: 350px;
         padding: 25px;
         border-radius: 15px;
         font-size: 0.95rem;
@@ -407,7 +407,7 @@ footer ul li a {
 }
 
 footer ul li a svg {
-    fill: white;
+    fill: black;
     /* iconos blancos (los puedes cambiar) */
 }
 
@@ -570,14 +570,7 @@ footer li {
         top: 90px;
         right: 0;
         width: 100%;
-        background: linear-gradient(0deg,
-                white 0%,
-                /* Amarillo abajo */
-                #0047ff 50%,
-                /* Azul al centro */
-                #ffdd00 100%
-                /* Blanco arriba */
-            );
+        background: white;
         max-height: 0;
         overflow: hidden;
         text-align: center;
