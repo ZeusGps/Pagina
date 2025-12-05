@@ -2,6 +2,76 @@
     padding: 0;
     margin: 0;
     font-weight: 600;
+    
+}
+
+
+/* BUSCADOR DENTRO DEL HEADER */
+.search-box-header {
+   
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    padding: 8px 15px;
+}
+
+.search-box-header input {
+    
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.search-box-header button {
+    padding: 10px 18px;
+    background: #0047FF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search-box-header button:hover {
+    background: #0033c2;
+}
+
+/* Resaltado del texto encontrado */
+.highlight {
+    background: yellow;
+    color: black;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+
+
+/* ⭐ RESPONSIVE CELULAR */
+@media (max-width: 768px) {
+    .search-box-header {
+        display: none;
+        width: 100%;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .search-box-header input {
+        width: 70%;
+    }
+
+    .search-box-header button {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-box-header {
+        margin-top: 90px !important;
+    }
 }
 
 
@@ -209,11 +279,6 @@ body {
 
 
 
-
-* {
-    text-transform: lowercase;
-    /* todo en minúscula */
-}
 
 *::first-letter {
     text-transform: uppercase;
