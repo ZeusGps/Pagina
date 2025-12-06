@@ -525,59 +525,50 @@
 
 
     <script>
-        // Abrir chat
-        document.getElementById("abrirChat").onclick = function () {
-            document.getElementById("chatBox").style.display = "block";
-        };
+    // Abrir chat
+    document.getElementById("abrirChat").onclick = function () {
+        document.getElementById("chatBox").style.display = "block";
+    };
 
-        // Cerrar chat
-        function cerrarChat() {
-            document.getElementById("chatBox").style.display = "none";
-        }
+    // Cerrar chat
+    function cerrarChat() {
+        document.getElementById("chatBox").style.display = "none";
+    }
 
-        async function enviarMensaje() {
-            let texto = document.getElementById("pregunta").value.trim();
-            if (texto === "") return;
+    async function enviarMensaje() {
+        let texto = document.getElementById("pregunta").value.trim();
+        if (texto === "") return;
 
-            mostrar("user", texto);
-            document.getElementById("pregunta").value = "";
+        mostrar("user", texto);
+        document.getElementById("pregunta").value = "";
 
-            let respuesta = await consultarGroq(texto);
-            mostrar("bot", respuesta);
-        }
+        let respuesta = await consultarGroq(texto);
+        mostrar("bot", respuesta);
+    }
 
-        function mostrar(tipo, mensaje) {
-            let chat = document.getElementById("messages");
-            let div = document.createElement("div");
-            div.className = tipo;
-            div.innerText = mensaje;
-            chat.appendChild(div);
-            chat.scrollTop = chat.scrollHeight;
-        }
+    function mostrar(tipo, mensaje) {
+        let chat = document.getElementById("messages");
+        let div = document.createElement("div");
+        div.className = tipo;
+        div.innerText = mensaje;
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+    }
 
-        async function consultarGroq(texto) {
+    // 👉 AHORA EL CHAT LE HABLA AL WORKER
+    async function consultarGroq(texto) {
 
-            const API_KEY = "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";
+        const respuesta = await fetch("https://divine-brook-66bf.zeusgpssoporte.workers.dev/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: texto })
+        });
 
-            const respuesta = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${API_KEY}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    model: "llama3-8b-8192",
-                    messages: [
-                        { role: "system", content: "Eres el asistente de Zeus GPS." },
-                        { role: "user", content: texto }
-                    ]
-                })
-            });
+        const data = await respuesta.json();
+        return data.reply;
+    }
+</script>
 
-            const data = await respuesta.json();
-            return data.choices[0].message.content;
-        }
-    </script>
 
 
 </body>
