@@ -499,6 +499,45 @@
 
 
 
+
+
+
+    <script>
+        function buscarTexto() {
+            let texto = document.getElementById("buscador").value.toLowerCase();
+            if (texto.trim() === "") return;
+
+            // Obtener todo el texto de la página
+            let contenido = document.body.innerText.toLowerCase();
+
+            // Ver si existe
+            if (contenido.includes(texto)) {
+                // Buscar en qué parte está y desplazarse hacia allí
+                let elementos = document.querySelectorAll("body *");
+
+                for (let elem of elementos) {
+                    if (elem.innerText && elem.innerText.toLowerCase().includes(texto)) {
+                        elem.scrollIntoView({ behavior: "smooth", block: "center" });
+                        elem.style.backgroundColor = "yellow";   // resalta el texto encontrado
+
+                        // Quitar resaltado después de 2 segundos
+                        setTimeout(() => {
+                            elem.style.backgroundColor = "";
+                        }, 2000);
+
+                        break;
+                    }
+                }
+            } else {
+                alert("No se encontró la palabra.");
+            }
+        }
+    </script>
+
+
+
+
+
 </body>
 
 </html>
