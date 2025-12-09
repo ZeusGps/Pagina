@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cotizar SOAT - Zeus GPS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizar SOAT - Zeus GPS</title>
 
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
 
 
- <header>
+    <header>
         <div class="box-1">
 
             <div class="img-1">
@@ -43,99 +44,101 @@
 
 
 
-<style>
-/* FORMULARIO SOAT */
-.soat {
-    max-width: 500px;
-    margin: 80px auto;
-    background: rgba(255,255,255,0.85);
-    padding: 2px;
-    border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    backdrop-filter: blur(4px);
-}
+    <style>
+        /* FORMULARIO SOAT */
+        .soat {
+            max-width: 500px;
+            margin: 80px auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 2px;
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(4px);
+        }
 
-.soat h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 26px;
-    color: #0047FF;
-}
+        .soat h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #0047FF;
+        }
 
-.soat form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+        .soat form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-.soat input,
-.soat select {
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #bbb;
-    font-size: 15px;
-}
+        .soat input,
+        .soat select {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #bbb;
+            font-size: 15px;
+        }
 
-.soat button {
-    padding: 14px;
-    background: #0047FF;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 17px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        .soat button {
+            padding: 14px;
+            background: #0047FF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-.soat button:hover {
-    background: #0033c2;
-}
-</style>
+        .soat button:hover {
+            background: #0033c2;
+        }
+    </style>
 
 </head>
+
 <body>
 
-<section class="soat">
-    <h2>Cotiza tu SOAT</h2>
+    <section class="soat">
+        <h2>Cotiza tu SOAT</h2>
 
-    <form id="formSOAT">
+        <form id="formSOAT">
 
-        <select id="vehiculo" required>
-            <option value="">Seleccione el tipo de vehículo</option>
-            <option value="Motocicleta">Motocicleta</option>
-            <option value="Carro Particular">Carro Particular</option>
-            <option value="Campero / Camioneta">Campero / Camioneta</option>
-            <option value="Otro">Otro</option>
-        </select>
+            <select id="vehiculo" required>
+                <option value="">Seleccione el tipo de vehículo</option>
+                <option value="Motocicleta">Motocicleta</option>
+                <option value="Carro Particular">Carro Particular</option>
+                <option value="Campero / Camioneta">Campero / Camioneta</option>
+                <option value="Otro">Otro</option>
+            </select>
 
-        <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="nombre" placeholder="Nombre" required>
 
-        <input type="text" id="placa" placeholder="Placa del vehículo" required>
+            <input type="text" id="placa" placeholder="Placa del vehículo" required>
 
-        <button type="submit">Enviar cotización</button>
-    </form>
-</section>
+            <button type="submit">Enviar cotización</button>
+        </form>
+    </section>
 
-<script>
-document.getElementById("formSOAT").addEventListener("submit", function(e){
-    e.preventDefault();
+    <script>
+        document.getElementById("formSOAT").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-    let vehiculo = document.getElementById("vehiculo").value;
-    let nombre = document.getElementById("nombre").value;
-    let placa = document.getElementById("placa").value;
+            let vehiculo = document.getElementById("vehiculo").value;
+            let nombre = document.getElementById("nombre").value;
+            let placa = document.getElementById("placa").value;
 
-let mensaje = `Hola, quiero cotizar un SOAT:
+            let mensaje = `Hola, quiero cotizar un SOAT:
 🚘 Vehículo: ${vehiculo}
 🔖 Placa: ${placa}
 
 🙂 Nombre: ${nombre}`;
-;
+            ;
 
-    let url = `https://wa.me/573102206602?text=${encodeURIComponent(mensaje)}`;
+            let url = `https://wa.me/573102206602?text=${encodeURIComponent(mensaje)}`;
 
-    window.open(url, "_blank");
-});
-</script>
+            window.open(url, "_blank");
+        });
+    </script>
 
 </body>
+
 </html>

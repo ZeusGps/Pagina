@@ -2,13 +2,13 @@
     padding: 0;
     margin: 0;
     font-weight: 600;
-    
+
 }
 
 
 /* BUSCADOR DENTRO DEL HEADER */
 .search-box-header {
-   
+
     margin: 10px auto 0;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@
 }
 
 .search-box-header input {
-    
+
     flex: 1;
     padding: 10px;
     border-radius: 10px;
@@ -59,15 +59,22 @@
     right: 20px;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     padding: 0;
     animation: fadeIn 0.3s ease;
     z-index: 9999;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .chat-header {
@@ -94,7 +101,8 @@
     padding: 10px;
 }
 
-.bot, .user {
+.bot,
+.user {
     padding: 8px 10px;
     margin: 7px 0;
     border-radius: 10px;
@@ -177,7 +185,8 @@ body {
 
 
 
-html, body {
+html,
+body {
     overflow-x: hidden !important;
     width: 100%;
     max-width: 100%;
@@ -187,7 +196,10 @@ html, body {
     box-sizing: border-box;
 }
 
-section, div, header, footer {
+section,
+div,
+header,
+footer {
     max-width: 100%;
 }
 
@@ -202,7 +214,7 @@ section, div, header, footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 999;
     animation: float 3s infinite ease-in-out;
     text-decoration: none;
@@ -214,9 +226,17 @@ section, div, header, footer {
 }
 
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
@@ -226,6 +246,7 @@ section, div, header, footer {
         right: 15px;
         bottom: 15px;
     }
+
     .wp-icon {
         width: 28px;
         height: 28px;
