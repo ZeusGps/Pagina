@@ -133,6 +133,154 @@
     </section>
 
 
+    <style>
+        .promo-zeus {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 32px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            box-shadow: 0 18px 45px rgba(10, 61, 255, 0.35);
+            flex-wrap: wrap;
+            animation: zeusFade 1s ease forwards;
+        }
+
+        @keyframes zeusFade {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .promo-zeus img {
+            width: 240px;
+            max-width: 100%;
+        }
+
+        .badge-descuento {
+            background: #FFD200;
+            color: #000;
+            font-weight: 700;
+            padding: 7px 16px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .promo-text {
+            flex: 1;
+        }
+
+        .promo-text h2 {
+            font-size: 2.2rem;
+            margin: 10px 0;
+            color: #2EC9FF;
+        }
+
+        .promo-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .precio del {
+            color: #aaa;
+        }
+
+        .precio strong {
+            display: block;
+            font-size: 2.4rem;
+            color: #FFD200;
+        }
+
+        .promo-text a {
+            display: inline-block;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #FFD200, #ffea70);
+            color: #000;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+            animation: zeusPulse 2.5s infinite;
+        }
+
+        @keyframes zeusPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 210, 0, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 18px rgba(255, 210, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 210, 0, 0);
+            }
+        }
+
+        .promo-text a:hover {
+            transform: scale(1.06);
+        }
+
+        @media (max-width: 768px) {
+            .promo-zeus {
+                text-align: center;
+            }
+
+            .promo-zeus img {
+               
+                margin-right: 50px;
+                margin-left: 50px;
+            }
+
+            .promo-text h2 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+
+    <div class="promo-zeus">
+        <img src="img/zeus66.png" alt="Zeus GPS">
+
+        <div class="promo-text">
+            <span class="badge-descuento">🔥 ¡Aprovecha esta promoción!</span>
+
+            <h2>Rastreo Satelital Zeus GPS</h2>
+
+            <p>
+                Arrancamos este 2026 con promociones para que protegas tu vehiculo con equipos 4G, en Zeus GPS te
+                ofrecemos una promoción especial en rastreo satelital, para que comiences el 2026 con seguridad, control
+                y tranquilidad.
+            </p>
+
+            <div class="precio">
+                Antes:
+                <del>$300.000</del>
+                <strong>Ahora: $250.000</strong>
+                <small>Con instalación incluida</small>
+
+            </div>
+
+            <p></p>
+
+            <a href="https://wa.me/573165381078" target="_blank">
+                📲 Quiero esta promo
+            </a>
+        </div>
+    </div>
+
+
 
     <script>
         const reveals = document.querySelectorAll('.reveal');
